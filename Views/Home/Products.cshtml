@@ -1,0 +1,198 @@
+﻿@using ComputerShop.Models
+@model IEnumerable<Products>
+@{
+    ViewData["Title"] = "Товары";
+}
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-10 col-12">
+                <h1>
+                    <span class="d-block text-primary">Выбери свой</span>
+                    <span class="d-block text-dark">лучший комп (плз)</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="products section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <h2 class="mb-5">Новые товары</h2>
+            </div>
+            @{
+                foreach(var elem in Model)
+                {
+                    if (elem.isHit)
+                    {
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="add-to-cart">
+                                    <img src="@elem.img" class="img-fluid product-image" alt="">
+                                </a>
+
+                                <div class="product-top d-flex">
+                                    <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="add-to-cart"></a>
+                                </div>
+
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="product-title-link">@elem.Name</a>
+                                        </h5>
+
+                                        <p class="product-p">@elem.ShortDesc</p>
+                                    </div>
+
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">@elem.price ₽</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+
+            <div class="col-12">
+                <h2 class="mb-5">Телефоны</h2>
+            </div>
+            @{
+                foreach(var elem in Model)
+                {
+                    if (elem.Category.Name == "Телефоны")
+                    {
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })">
+                                    <img src="@elem.img" class="img-fluid product-image" alt="">
+                                </a>
+
+                                <div class="product-top d-flex">
+                                    <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })"></a>
+                                </div>
+
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="product-title-link">@elem.Name</a>
+                                        </h5>
+
+                                        <p class="product-p">@elem.ShortDesc</p>
+                                    </div>
+
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">@elem.price ₽</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            <div class="col-12">
+                <h2 class="mb-5">ЦП</h2>
+            </div>
+            @{
+                foreach (var elem in Model)
+                {
+                    if (elem.Category.Name == "ЦП")
+                    {
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })">
+                                    <img src="@elem.img" class="img-fluid product-image" alt="">
+                                </a>
+
+                                <div class="product-top d-flex">
+                                    <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })"></a>
+                                </div>
+
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="product-title-link">@elem.Name</a>
+                                        </h5>
+
+                                        <p class="product-p">@elem.ShortDesc</p>
+                                    </div>
+
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">@elem.price ₽</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            <div class="col-12">
+                <h2 class="mb-5">Ноутбуки</h2>
+            </div>
+            @{
+                foreach (var elem in Model)
+                {
+                    if (elem.Category.Name == "Ноутбуки")
+                    {
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })">
+                                    <img src="@elem.img" class="img-fluid product-image" alt="">
+                                </a>
+
+                                <div class="product-top d-flex">
+                                    <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })"></a>
+                                </div>
+
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="product-title-link">@elem.Name</a>
+                                        </h5>
+
+                                        <p class="product-p">@elem.ShortDesc</p>
+                                    </div>
+
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">@elem.price ₽</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            <div class="col-12">
+                <h2 class="mb-5">Планшеты</h2>
+            </div>
+            @{
+                foreach (var elem in Model)
+                {
+                    if (elem.Category.Name == "Планшеты")
+                    {
+                        <div class="col-lg-4 col-12 mb-3">
+                            <div class="product-thumb">
+                                <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })">
+                                    <img src="@elem.img" class="img-fluid product-image" alt="">
+                                </a>
+
+                                <div class="product-top d-flex">
+                                    <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })"></a>
+                                </div>
+
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="@Url.Action("product_detail", "Home", new { id = elem.Id })" class="product-title-link">@elem.Name</a>
+                                        </h5>
+
+                                        <p class="product-p">@elem.ShortDesc</p>
+                                    </div>
+
+                                    <small class="product-price text-muted ms-auto mt-auto mb-5">@elem.price ₽</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+
+        </div>
+    </div>
+</section>

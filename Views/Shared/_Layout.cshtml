@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ComputerShop</title>
+
+    <!--CSS FILES-->
+    <link href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/slick.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/bootstrap-icons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ComputerShop.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <strong><span>Комп</span> Шоп</strong>
+            </a>
+
+            <div class="d-lg-none">
+                <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+
+                <a href="product-detail.html" class="bi-bag custom-icon"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="@Url.Action("Index", "Home")">Главная</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("About", "Home")">История</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Products", "Home")">Товары</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("FAQ","Home")">ВИО</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Contact", "Home")">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-block">
+                    <a href="@Url.Action("signIn","Home")" class="bi-person custom-icon me-3"></a>
+
+                    <a href="@Url.Action("Cart","Home")" class="bi-bag cart custom-icon" id="cart"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="@Url.Action("Index", "Home")">Комп</a> Шоп</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong>КомпШоп</strong></p>
+                    <br>
+                    <p class="copyright-text">Designed by <a href="https://vk.com/id432056670" target="_blank">NikBSDopen</a></p>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="@Url.Action("About", "Home")" class="footer-menu-link">История</a></li>
+
+                        <li class="footer-menu-item"><a href="@Url.Action("Products", "Home")" class="footer-menu-link">Товары</a></li>
+
+                        <li class="footer-menu-item"><a href="@Url.Action("FAQ", "Home")" class="footer-menu-link">FAQs</a></li>
+
+                        <li class="footer-menu-item"><a href="@Url.Action("Contact", "Home")" class="footer-menu-link">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">Social</h5>
+
+                    <ul class="social-icon">
+
+                        <li><a href="https://vk.com/id432056670" class="social-icon-link bi-youtube"></a></li>
+
+                        <li><a href="https://vk.com/id432056670" class="social-icon-link bi-whatsapp"></a></li>
+
+                        <li><a href="https://vk.com/id432056670" class="social-icon-link bi-instagram"></a></li>
+
+                        <li><a href="https://vk.com/id432056670" class="social-icon-link bi-discord"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/cart.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/Headroom.js"></script>
+    <script src="~/js/jQuery.headroom.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

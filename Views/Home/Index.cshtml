@@ -1,0 +1,281 @@
+@{
+    ViewData["Title"] = "Главная страница";
+}
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+        <section class="slick-slideshow">
+            <div class="slick-custom">
+                <img src="~/img/slideshow/WorkerSlider.jpg" class="img-fluid" alt="">
+
+                <div class="slick-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-10">
+                                <h1 class="slick-title">Самый лучший магазин</h1>
+
+                                <p class="lead text-white mt-lg-3 mb-lg-5">У нас лушие товары</p>
+
+                        <a href="@Url.Action("About", "Home")" class="btn custom-btn">Читать больше</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slick-custom">
+            <img src="~/img/slideshow/team-meeting-renewable-energy-project.jpeg" class="img-fluid" alt="">
+
+                <div class="slick-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-10">
+                                <h1 class="slick-title">С нами работают только профессионалы</h1>
+
+                                <p class="lead text-white mt-lg-3 mb-lg-5">Хотите присоедениться?</p>
+
+                        <a href="@Url.Action("Products", "Home")" class="btn custom-btn">Товары</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slick-custom">
+            <img src="~/img/slideshow/two-business-partners-working-together-office-computer.jpeg" class="img-fluid" alt="">
+
+                <div class="slick-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-10">
+                                <h1 class="slick-title">Можно оформить заявку на технику заранее</h1>
+
+                                <p class="lead text-white mt-lg-3 mb-lg-5">функционал находится в процессе</p>
+
+                        <a href="@Url.Action("Contact", "Home")" class="btn custom-btn">Отправить отзыв</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="about section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 text-center">
+                        <h2 class="mb-5">Давайте начнем <span>покупку</span> среди лучших товаров</h2>
+                    </div>
+
+                    <div class="col-lg-2 col-12 mt-auto mb-auto">
+                        <ul class="nav nav-pills mb-5 mx-auto justify-content-center align-items-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Вступление</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-youtube-tab" data-bs-toggle="pill" data-bs-target="#pills-youtube" type="button" role="tab" aria-controls="pills-youtube" aria-selected="true">Компьютеры</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-skill-tab" data-bs-toggle="pill" data-bs-target="#pills-skill" type="button" role="tab" aria-controls="pills-skill" aria-selected="false">Возможности</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-10 col-12">
+                        <div class="tab-content mt-2" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                <img src="~/img/pim-chu-z6NZ76_UTDI-unsplash.jpeg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12">
+                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                            <h4 class="mb-3"><span>Мощные</span> Компьютеры <br>Для <span>вас</span> и не только</h4>
+
+                                    <p>Перед покупкой вы должны <a href="@Url.Action("signIn", "Home")">зарегистрироваться</a> / <a href="@Url.Action("LogIn", "Home")">войти</a> в свой аккаунт</p>
+
+
+                                            <div class="mt-2 mt-lg-auto">
+                                        <a href="@Url.Action("About", "Home")" class="custom-link mb-2">
+                                                    Узнать больше о нас
+                                                    <i class="bi-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
+
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube-nocookie.com/embed/51QO4pavK3A?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-5 col-12">
+                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                            <h4 class="mb-3">Крутой компьютер</h4>
+
+                                            <p>Поверьте, это именно то, что нужно вам</p>
+
+
+                                            <div class="mt-2 mt-lg-auto">
+                                        <a href="../product_detail?id=3" class="custom-link mb-2">
+                                                    Купить
+                                                    <i class="bi-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab">
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                <img src="~/img/cody-lannom-G95AReIh_Ko-unsplash.jpeg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12">
+                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                            <h4 class="mb-3">Осталось всего несколько штук!</h4>
+
+
+                                            <div class="skill-thumb mt-3">
+
+                                                <strong>Сколько нами довольны:</strong>
+                                                <span class="float-end">90%</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                                </div>
+
+                                                <strong>Успешно удовлетворенных запросов:</strong>
+                                                <span class="float-end">70%</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                                </div>
+
+                                                <strong>Оставляют отзывов более:</strong>
+                                                <span class="float-end">80%</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mt-2 mt-lg-auto">
+                                        <a href="@Url.Action("Products", "Home")" class="custom-link mb-2">
+                                                    беру!
+                                                    <i class="bi-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="front-product">
+            <div class="container-fluid p-0">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 col-12">
+                <img src="~/img/retail-shop-owner-mask-social-distancing-shopping.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="px-5 py-5 py-lg-0">
+
+                            <h2 class="mb-4"><span>Компьютеры</span> это круто</h2>
+
+                            <p class="lead mb-4">У нас даже можно оформить кредит или взять любую технику в рассрочку</p>
+
+                                <a href="@Url.Action("Products", "Home")" class="custom-link">
+                                взять в кредит?
+                                <i class="bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-product section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-5">Блок будующих изменений</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-12 mb-3">
+                        <div class="product-thumb">
+                    <a href="@Url.Action("Products", "Home")">
+                        <img src="~/img/product/evan-mcdougall-qnh1odlqOmk-unsplash.jpeg" class="img-fluid product-image" alt="">
+                            </a>
+
+                            <div class="product-top d-flex">
+                                <span class="product-alert me-auto">вскоре появится</span>
+
+                        <a href="@Url.Action("Products", "Home")" class="bi-heart-fill product-icon"></a>
+                            </div>
+
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h5 class="product-title mb-0">
+                                <a href="@Url.Action("Products", "Home")" class="product-title-link">Умный горшок для растений</a>
+                                    </h5>
+
+                                    <p class="product-p">горшок</p>
+                                </div>
+
+                                <small class="product-price text-muted ms-auto mt-auto mb-5">100₽</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12 mb-3">
+                        <div class="product-thumb">
+                    <a href="@Url.Action("Products", "Home")">
+                        <img src="~/img/product/jordan-nix-CkCUvwMXAac-unsplash.jpeg" class="img-fluid product-image" alt="">
+                            </a>
+
+                            <div class="product-top d-flex">
+                                <span class="product-alert">Низкая цена</span>
+
+                        <a href="@Url.Action("Products", "Home")" class="bi-heart-fill product-icon ms-auto"></a>
+                            </div>
+
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h5 class="product-title mb-0">
+                                <a href="@Url.Action("Products", "Home")" class="product-title-link">Бургер сет</a>
+                                    </h5>
+
+                                    <p class="product-p">Можно не тратить много денег а купить сразу готовый набор </p>
+                                </div>
+
+                                <small class="product-price text-muted ms-auto mt-auto mb-5">120000₽</small>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+   
